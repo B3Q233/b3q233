@@ -1,12 +1,109 @@
 [
   {
     "slug": "hello-world",
-    "title": "我的第一篇博客",
+    "name": "hello-world",
+    "title": "hello-world",
+    "dirs": [],
     "date": "2026-06-28",
-    "summary": "欢迎来到我的个人博客！这是第一篇示例文章。  关于这个博客 这个博客采用纯静态架构： - Markdown 编写：所有文章使用 Markdown 格式 - 自动索引：构建脚本自动扫描目录生成文章列表 - 零依赖部署：可部署到 GitHub Pages、Vercel 等任意静态托管  代码示例 ...",
     "tags": [
       "技术",
       "博客"
-    ]
+    ],
+    "summary": "欢迎来到我的个人博客！这是第一篇示例文章。  关于这个博客 这个博客采用纯静态架构： - Markdown 编写：所有文章使用 Markdown 格式 - 自动索引：构建脚本自动扫描目录生成文章列表 - 零依赖部署：可部署到 GitHub Pages、Vercel 等任意静态托管  代码示例 ..."
+  },
+  {
+    "slug": "test/渲染测试",
+    "name": "渲染测试",
+    "title": "Markdown 渲染测试",
+    "dirs": [
+      "test"
+    ],
+    "date": "2026-06-28",
+    "tags": [
+      "测试",
+      "渲染",
+      "markdown"
+    ],
+    "summary": "覆盖所有 markdown 渲染功能的综合测试用例"
+  },
+  {
+    "slug": "vibecode",
+    "name": "vibecode",
+    "title": "vibecode",
+    "dirs": [],
+    "date": "2026-06-28",
+    "tags": [],
+    "summary": "test 114514\r \r  测试\r \r 测试用"
+  },
+  {
+    "slug": "安卓项目/仿网易云音乐",
+    "name": "仿网易云音乐",
+    "title": "仿网易云音乐",
+    "dirs": [
+      "安卓项目"
+    ],
+    "date": "2026-06-28",
+    "tags": [],
+    "summary": "c++\r 仿网易云音乐\r \t技术：mvvm 架构，okHttp网络请求，kotlin，协程，service 前台显示，音乐三级缓存（本地，内存，音乐直接链接），将service中的player的状态暴露出来给一个单例类playerConnection。该类通过stateFlow提供监听流。音乐播发的..."
+  },
+  {
+    "slug": "安卓项目/思路",
+    "name": "思路",
+    "title": "思路",
+    "dirs": [
+      "安卓项目"
+    ],
+    "date": "2026-06-28",
+    "tags": [],
+    "summary": "总体架构\r \r \r 基础配置模块\r 数据层模块\r 播放核心模块\r 业务页面模块\r UI模块\r \r \r 主要功能\r \r 可以根据功能依赖关系分为主要功能，次要功能和其它功能\r \r \r 被大部分次要功能依赖的功能为主要功能\r 次要功能必须依赖主要功能实现\r 独立性比较高的功能为其它功能\r \r \r \r..."
+  },
+  {
+    "slug": "Java 基础",
+    "name": "Java 基础",
+    "title": "Java 基础",
+    "dirs": [],
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "JVM JDK JRE\r \r \r JVM java 虚拟机\r JDK 一个用于开发java程序的工具包\r JRE java运行环境\r java 程序 通过编译成字节码.class 然后在JVM上运行\r 字节码：\r \tJVM 可以理解的代码 .class\r \r \r \r \r \r \r 基本数据类型\r \r..."
+  },
+  {
+    "slug": "安卓项目/布局",
+    "name": "布局",
+    "title": "布局",
+    "dirs": [
+      "安卓项目"
+    ],
+    "date": "2026-03-05",
+    "tags": [],
+    "summary": "整体架构 \r \tMVVM\r 分层\r     datasource\r \trepository\r \t viewmodel\r \t   view\r 使用Result封装网络数据源数据\r 使用UiState封装Result数据和本地数据源数据\r // 专门用于 UI 层的状态封装\r sealed class..."
+  },
+  {
+    "slug": "安卓项目/前置",
+    "name": "前置",
+    "title": "前置",
+    "dirs": [
+      "安卓项目"
+    ],
+    "date": "2025-12-25",
+    "tags": [],
+    "summary": "已学：\r \tKotlin： 基础 \r \tAndroid: Activity Fragment Service ContetnProvider\r \t存储：\t   \r \t网络：\t   \r \t多媒体处理：\r \t设计模式：\r \t第三方库：\r \r \r  一、基础编程语言与工具\r \r 1.  Kotlin..."
+  },
+  {
+    "slug": "C# 入门",
+    "name": "C# 入门",
+    "title": "C# 入门",
+    "dirs": [],
+    "date": "2025-07-06",
+    "tags": [],
+    "summary": "C 程序文件格式\r \r  1. .cs 文件\r \r 这是最常见的 C 源文件格式，用于编写 C 代码。每个 .cs 文件可以包含类、接口、结构体、枚举等类型的定义，也可以包含命名空间、方法、属性等成员的实现。\r \r  用途\r \r 用于编写 C 程序的源代码，是开发过程中主要的文件类型。\r \r ..."
+  },
+  {
+    "slug": "WPF",
+    "name": "WPF",
+    "title": "WPF",
+    "dirs": [],
+    "date": "2025-04-23",
+    "tags": [],
+    "summary": "XAML 基础\r \r XAML即可扩展应用程序标记语言，是一种由微软开发的基于 XML 的声明式标记语言，用于描述用户界面的结构和外观。\r \r XAML 文件是通常具有 .xaml 扩展名的 XML 文件。 可通过任何 XML 编码对文件进行编码，但通常以 UTF-8 编码。\r \r..."
   }
 ]
