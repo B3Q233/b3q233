@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人博客">
+    <title>博客 | John.DEV</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- marked.js CDN — markdown 渲染 -->
+    <script src="https://unpkg.com/marked/marked.min.js"></script>
+</head>
+<body>
+
+    <!-- ====== 导航栏 ====== -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">John.DEV</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">简历</a></li>
+                    <li><a href="blog.html" class="active">博客</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== 主内容 ====== -->
+    <main class="container">
+
+        <!-- 博客列表视图（默认） -->
+        <section id="blog-list-view">
+            <div class="blog-header">
+                <h1>博客</h1>
+                <p>记录学习、思考与技术实践</p>
+            </div>
+            <div id="post-list-container">
+                <p class="post-empty">加载中...</p>
+            </div>
+        </section>
+
+        <!-- 博客详情视图（隐藏） -->
+        <section id="blog-detail-view" style="display:none;">
+            <div class="post-detail-header">
+                <a href="blog.html" class="back-link">← 返回列表</a>
+                <h1 id="detail-title"></h1>
+                <div class="post-meta" id="detail-meta"></div>
+            </div>
+            <article class="post-content" id="detail-content"></article>
+        </section>
+
+    </main>
+
+    <!-- ====== 页脚 ====== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 John.DEV — Built with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- ====== 脚本 ====== -->
+    <script>
+    (function () {
+        // ====== 获取 URL 参数 ======
+        function getParam(name) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(name);
+        }
+
+        // ====== DOM 元素 ======
+        const listView = document.getElementById('blog-list-view');
+        const detailView = document.getElementById('blog-detail-view');
+        const listContainer = document.getElementById('post-list-container');
+        const detailTitle = document.getElementById('detail-title');
+        const detailMeta = document.getElementById('detail-meta');
+        const detailContent = document.getElementById('detail-content');
+
+        // ====== 渲染博客列表 ======
+        async function renderPostList() {
+            try {
+                const resp = await fetch('posts.json');
+                if (!resp.ok) throw new Error('posts.json 加载失败');
+                const posts = await resp.json();
+
+                if (!posts.length) {
+                    listContainer.innerHTML = '<p class="post-empty">暂无文章</p>';
+                    return;
+                }
+
+                const html = ['<ul class="post-list">'];
+                posts.forEach(p => {
+                    const tagsHtml = (p.tags || []).map(t =>
+                        `<span class="tag">${escapeHtml(t)}</span>`
+                    ).join('');
+
+                    html.push(`
+                        <li>
+                            <a class="post-card" href="blog.html?post=${encodeURIComponent(p.slug)}">
+                                <div class="post-title">${escapeHtml(p.title)}</div>
+                                <div class="post-meta">
+                                    <span>📅 ${escapeHtml(p.date)}</span>
+                                </div>
+                                <div class="post-summary">${escapeHtml(p.summary)}</div>
+                                ${tagsHtml ? `<div class="post-tags">${tagsHtml}</div>` : ''}
+                            </a>
+                        </li>
+                    `);
+                });
+                html.push('</ul>');
+
+                listContainer.innerHTML = html.join('');
+            } catch (err) {
+                console.error(err);
+                listContainer.innerHTML = '<p class="post-empty">文章列表加载失败，请确保已运行 <code>node build.js</code></p>';
+            }
+        }
+
+        // ====== 渲染文章详情 ======
+        async function renderPostDetail(slug) {
+            // 验证 slug 安全性：只允许字母、数字、连字符、下划线、中文
+            if (!/^[\w一-鿿-]+$/.test(slug)) {
+                showError('无效的文章标识');
+                return;
+            }
+
+            try {
+                const resp = await fetch(`posts/${encodeURIComponent(slug)}.md`);
+                if (!resp.ok) throw new Error('文章不存在');
+                const mdText = await resp.text();
+
+                // 解析 frontmatter 获取元数据
+                let meta = {};
+                let body = mdText;
+                const fmMatch = mdText.match(/^---\s*\n([\s\S]*?)\n---\s*\n/);
+                if (fmMatch) {
+                    body = mdText.slice(fmMatch[0].length);
+                    fmMatch[1].split('\n').forEach(line => {
+                        const kv = line.match(/^(\w[\w-]*)\s*:\s*(.+)/);
+                        if (kv) {
+                            let val = kv[2].trim();
+                            if ((val.startsWith('"') && val.endsWith('"')) ||
+                                (val.startsWith("'") && val.endsWith("'"))) {
+                                val = val.slice(1, -1);
+                            }
+                            meta[kv[1]] = val;
+                        }
+                    });
+                }
+
+                // 提取标题
+                const titleMatch = body.match(/^#\s+(.+)/m);
+                const title = meta.title || (titleMatch ? titleMatch[1] : slug);
+
+                // 渲染 markdown
+                if (typeof marked !== 'undefined') {
+                    marked.setOptions({ breaks: true, gfm: true });
+                }
+                const htmlContent = typeof marked !== 'undefined'
+                    ? marked.parse(body)
+                    : `<pre>${escapeHtml(body)}</pre>`;
+
+                // 显示
+                document.title = `${title} | John.DEV`;
+                detailTitle.textContent = title;
+                detailMeta.innerHTML = meta.date
+                    ? `<span>📅 ${escapeHtml(meta.date)}</span>`
+                    : '';
+                if (meta.tags) {
+                    const tags = Array.isArray(meta.tags) ? meta.tags : [meta.tags];
+                    detailMeta.innerHTML += ' ' + tags.map(t =>
+                        `<span class="tag">${escapeHtml(t)}</span>`
+                    ).join(' ');
+                }
+                detailContent.innerHTML = htmlContent;
+
+                // 代码块语法高亮（简单处理：保持 pre > code 结构）
+                detailContent.querySelectorAll('pre code').forEach(block => {
+                    block.parentElement.classList.add('code-block');
+                });
+
+                // 切换视图
+                listView.style.display = 'none';
+                detailView.style.display = 'block';
+                window.scrollTo({ top: 0 });
+
+            } catch (err) {
+                console.error(err);
+                showError('文章加载失败：' + err.message);
+            }
+        }
+
+        function showError(msg) {
+            listView.style.display = 'block';
+            detailView.style.display = 'none';
+            listContainer.innerHTML = `<p class="post-empty">${escapeHtml(msg)}</p>`;
+        }
+
+        // ====== HTML 转义 ======
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        // ====== 入口 ======
+        const postSlug = getParam('post');
+        if (postSlug) {
+            renderPostDetail(postSlug);
+        } else {
+            renderPostList();
+        }
+    })();
+    </script>
+
+</body>
+</html>
