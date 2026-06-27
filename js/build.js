@@ -6,8 +6,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const POSTS_DIR = path.join(__dirname, 'posts');
-const OUTPUT_FILE = path.join(__dirname, 'posts.json');
+const ROOT = path.join(__dirname, '..');
+const POSTS_DIR = path.join(ROOT, 'posts');
+const OUTPUT_FILE = path.join(ROOT, 'blogs', 'posts.json');
 
 /**
  * 极简 YAML frontmatter 解析（仅支持单层 key: value 和数组）
