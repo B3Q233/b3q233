@@ -303,15 +303,14 @@ function processImages(body, mdDir, slug) {
         // 确保目标目录存在
         if (!fs.existsSync(destDir)) fs.mkdirSync(destDir, { recursive: true });
 
-        // 处理重名（编号去重）
+        // 目标已存在则跳过（同一源文件不必重复拷贝）
         let destName = basename;
         let destPath = path.join(destDir, destName);
-        let n = 1;
-        while (fs.existsSync(destPath)) {
-            const nameWithoutExt = basename.slice(0, -ext.length);
-            destName = nameWithoutExt + '-' + n + ext;
-            destPath = path.join(destDir, destName);
-            n++;
+        if (fs.existsSync(destPath)) {
+            // 目标已存在，跳过拷贝但路径仍需改写
+            const newSrc = 'pic/' + slug.replace(/\\/g, '/') + '/' + destName;
+            newBody = newBody.split(src).join(newSrc);
+            continue;
         }
 
         // 拷贝文件

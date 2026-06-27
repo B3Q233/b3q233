@@ -144,19 +144,48 @@
             }
             usedIds.add(id);
             h.id = id;
-            items.push({ level: parseInt(h.tagName[1]), text: h.textContent.trim(), id });
+            items.push({ level: parseInt(h.tagName[1]), text: h.textContent.trim(), id, children: [] });
         });
 
-        // 计算最小级别，用于归一化缩进
-        const minLevel = Math.min(...items.map(i => i.level));
-
-        // 构建 TOC HTML
-        let tocHTML = '<div class="toc-title">📑 目录</div><ul class="toc-list">';
+        // 构建嵌套树结构
+        const tree = [];
+        const stack = []; // 路径栈：从根到当前节点的父级链
         items.forEach(item => {
-            const indent = item.level - minLevel;
-            tocHTML += `<li class="toc-item toc-level-${indent}"><a href="#${item.id}" title="${escHtml(item.text)}">${escHtml(item.text)}</a></li>`;
+            // 弹出栈中不比当前层级高的节点
+            while (stack.length > 0 && stack[stack.length - 1].level >= item.level) {
+                stack.pop();
+            }
+            if (stack.length === 0) {
+                tree.push(item);
+            } else {
+                stack[stack.length - 1].children.push(item);
+            }
+            stack.push(item);
         });
-        tocHTML += '</ul>';
+
+        // 渲染嵌套树为 HTML
+        function renderTree(nodes) {
+            if (!nodes.length) return '';
+            let html = '<ul class="toc-list">';
+            nodes.forEach(node => {
+                const hasChildren = node.children.length > 0;
+                html += '<li class="toc-item" data-level="' + node.level + '">';
+                html += '<div class="toc-node">';
+                if (hasChildren) {
+                    html += '<span class="toc-arrow">▼</span>';
+                }
+                html += '<a href="#' + node.id + '" title="' + escHtml(node.text) + '">' + escHtml(node.text) + '</a>';
+                html += '</div>';
+                if (hasChildren) {
+                    html += renderTree(node.children);
+                }
+                html += '</li>';
+            });
+            html += '</ul>';
+            return html;
+        }
+
+        const tocHTML = '<div class="toc-title">📑 目录</div>' + renderTree(tree);
 
         // 创建 TOC 面板
         const panel = document.createElement('aside');
@@ -191,6 +220,17 @@
                     toggle.title = '显示目录';
                 }, 200);
             }
+        });
+
+        // 手风琴：点击父级标题折叠/展开子级
+        panel.addEventListener('click', (e) => {
+            const arrow = e.target.closest('.toc-arrow');
+            if (!arrow) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const li = arrow.closest('.toc-item');
+            if (!li) return;
+            li.classList.toggle('toc-collapsed');
         });
 
         // 点击面板外部关闭

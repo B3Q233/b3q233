@@ -1,0 +1,11 @@
+# 源文件（仅保留构建产物）
+md/
+
+# 依赖与工具
+node_modules/
+.claude/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.tmp

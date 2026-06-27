@@ -486,6 +486,7 @@ img {
     margin-top: 2rem;
     margin-bottom: .75rem;
     line-height: 1.3;
+    scroll-margin-top: 5rem;  /* 避免 sticky 导航栏遮挡锚点跳转 */
 }
 .post-content h1 { font-size: 1.75rem; }
 .post-content h2 { font-size: 1.5rem; padding-bottom: .35rem; border-bottom: 1px solid var(--color-border); }
@@ -678,33 +679,60 @@ img {
     padding: 0;
     margin: 0;
 }
-.toc-item {
-    margin-bottom: .15rem;
+/* 嵌套子列表缩进 */
+.toc-list .toc-list {
+    padding-left: .75rem;
 }
-.toc-item a {
-    display: block;
-    padding: .3rem .5rem;
+.toc-item {
+    margin-bottom: .1rem;
+}
+
+/* 一行节点：箭头 + 链接 */
+.toc-node {
+    display: flex;
+    align-items: center;
+    gap: .2rem;
     border-radius: 4px;
+    padding: .2rem .4rem;
+    transition: background .15s;
+}
+.toc-node:hover {
+    background: var(--color-primary-light);
+}
+.toc-node a {
+    flex: 1;
     color: var(--color-text-secondary);
     font-size: .875rem;
     text-decoration: none;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: background .15s, color .15s;
 }
-.toc-item a:hover,
-.toc-item a:focus {
-    background: var(--color-primary-light);
+.toc-node a:hover {
     color: var(--color-primary);
 }
 
-/* 缩进层级 */
-.toc-level-0 { padding-left: 0; }
-.toc-level-1 { padding-left: 1rem; }
-.toc-level-2 { padding-left: 2rem; }
-.toc-level-3 { padding-left: 2.75rem; }
-.toc-level-0 a { font-weight: 600; color: var(--color-text); font-size: .9375rem; }
+/* 展开/折叠箭头 */
+.toc-arrow {
+    flex-shrink: 0;
+    font-size: .55rem;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    padding: 2px;
+    transition: transform .2s;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.toc-arrow:hover {
+    color: var(--color-primary);
+}
+
+/* 折叠状态：隐藏子 ul + 箭头旋转 */
+.toc-collapsed > .toc-list {
+    display: none;
+}
+.toc-collapsed > .toc-node .toc-arrow {
+    transform: rotate(-90deg);  /* ▼ → ▶ */
 
 /* ================================================================
    10. 响应式
