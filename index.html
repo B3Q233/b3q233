@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="个人简历 - 张三">
-    <title>个人简历 | 张三</title>
+    <meta name="description" content="严先明 - 个人简历">
+    <meta name="referrer" content="no-referrer">
+    <title>个人简历 | b3q</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- ====== 导航栏 ====== -->
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">John.DEV</a>
+            <a href="index.html" class="logo">b3q</a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">简历</a></li>
@@ -22,93 +22,83 @@
         </div>
     </header>
 
-    <!-- ====== 主内容 ====== -->
     <main class="container">
 
-        <!-- 个人头部 -->
-        <section class="profile-header">
-            <div class="avatar">张</div>
-            <h1>张三</h1>
-            <p class="subtitle">全栈工程师 / 技术写作者</p>
-            <p class="bio">
-                热爱技术，专注 Web 开发和系统设计。喜欢用简洁的代码解决复杂问题，
-                也乐于通过博客分享学习心得与实践经验。
-            </p>
-            <div class="contact-bar">
-                <span class="contact-item">
-                    <span class="contact-icon">📧</span> zhangsan@example.com
-                </span>
-                <span class="contact-item">
-                    <span class="contact-icon">💻</span> github.com/zhangsan
-                </span>
-                <span class="contact-item">
-                    <span class="contact-icon">📍</span> 中国·上海
-                </span>
+        <!-- BOSS直聘风格简历头部 -->
+        <section class="resume-header" id="resume-header" style="display:none">
+            <div class="resume-header-top">
+                <div class="resume-avatar" id="r-avatar">严</div>
+                <div class="resume-name-box">
+                    <h1 class="resume-name" id="r-name"></h1>
+                    <p class="resume-brief" id="r-brief"></p>
+                </div>
             </div>
+            <div class="resume-info-bar" id="r-info-bar"></div>
         </section>
 
-        <!-- 技能 -->
-        <section class="section-block">
-            <h2 class="section-title">技能</h2>
-            <ul class="skill-tags">
-                <li>JavaScript / TypeScript</li>
-                <li>React / Vue</li>
-                <li>Node.js</li>
-                <li>Python</li>
-                <li>Go</li>
-                <li>PostgreSQL / MySQL</li>
-                <li>Redis</li>
-                <li>Docker</li>
-                <li>Linux</li>
-                <li>Git</li>
-            </ul>
-        </section>
-
-        <!-- 工作经历 -->
-        <section class="section-block">
-            <h2 class="section-title">工作经历</h2>
-            <ul class="timeline">
-                <li>
-                    <div class="time-label">2024 - 至今</div>
-                    <h4>高级前端工程师</h4>
-                    <div class="org">某某科技有限公司</div>
-                    <p class="desc">负责核心产品前端架构设计，推动组件库建设，优化构建流程使 CI/CD 时间缩短 60%。</p>
-                </li>
-                <li>
-                    <div class="time-label">2021 - 2024</div>
-                    <h4>全栈开发工程师</h4>
-                    <div class="org">另一家互联网公司</div>
-                    <p class="desc">参与多个 ToB 项目的全栈开发，使用 React + Node.js 技术栈，服务超过 50 家企业客户。</p>
-                </li>
-                <li>
-                    <div class="time-label">2019 - 2021</div>
-                    <h4>初级开发工程师</h4>
-                    <div class="org">初创团队</div>
-                    <p class="desc">从零搭建公司官网及后台管理系统，独立完成前后端开发与部署。</p>
-                </li>
-            </ul>
-        </section>
-
-        <!-- 教育背景 -->
-        <section class="section-block">
-            <h2 class="section-title">教育背景</h2>
-            <ul class="timeline">
-                <li>
-                    <div class="time-label">2015 - 2019</div>
-                    <h4>计算机科学与技术 · 本科</h4>
-                    <div class="org">某大学</div>
-                </li>
-            </ul>
-        </section>
+        <!-- Markdown 正文 -->
+        <div class="post-content" id="resume-content">
+            <p style="text-align:center;color:var(--color-text-muted);padding:3rem 0;">加载中...</p>
+        </div>
 
     </main>
 
-    <!-- ====== 页脚 ====== -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 John.DEV — Built with ❤️</p>
+            <p>&copy; 2026 b3q — Built with ❤️</p>
         </div>
     </footer>
+
+    <script>
+    (async function () {
+        const el = document.getElementById('resume-content');
+        try {
+            const resp = await fetch('blogs/posts/个人简历.json');
+            if (!resp.ok) throw new Error('简历数据加载失败');
+            const r = await resp.json();
+
+            // === BOSS直聘风格头部 ===
+            document.getElementById('resume-header').style.display = '';
+            document.getElementById('r-name').textContent = r.name || r.title;
+
+            // 头像：有图片则显示图片，否则显示姓名首字
+            const avatarEl = document.getElementById('r-avatar');
+            if (r.avatar && r.avatar.trim()) {
+                avatarEl.innerHTML = `<img src="${escHtml(r.avatar.trim())}" alt="${escHtml(r.name || '')}" class="resume-avatar-img">`;
+            } else {
+                avatarEl.textContent = (r.name || '?')[0];
+            }
+
+            const rank = r.rank || '';
+            document.getElementById('r-brief').textContent =
+                [r.school, r.major, r.degree, rank].filter(Boolean).join(' / ');
+
+            const infoItems = [];
+            if (r.phone)  infoItems.push({ icon: '📱', text: r.phone });
+            if (r.school) infoItems.push({ icon: '🎓', text: r.school });
+            if (r.period) infoItems.push({ icon: '📅', text: r.period });
+            if (r.english) infoItems.push({ icon: '🌐', text: r.english });
+
+            document.getElementById('r-info-bar').innerHTML = infoItems
+                .map(i => `<span class="resume-info-item"><span class="resume-info-icon">${i.icon}</span>${escHtml(i.text)}</span>`)
+                .join('');
+
+            // === Markdown 正文 ===
+            document.title = r.title + ' | b3q';
+            el.innerHTML = r.bodyHtml;
+
+        } catch (err) {
+            console.error(err);
+            el.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:3rem 0;">简历加载失败，请先运行 <code>node js/build.js</code></p>';
+        }
+    })();
+
+    function escHtml(str) {
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
+    </script>
 
 </body>
 </html>

@@ -353,6 +353,21 @@ function main() {
         // 处理本地图片：复制到 blogs/pic/<slug>/，改写路径
         const { body: processedBody, copied } = processImages(body, mdDir, slug);
         if (copied > 0) console.log(`   🖼 已复制 ${copied} 张图片 → pic/${slug}/`);
+
+        // 处理 frontmatter 中的 avatar 头像
+        if (meta.avatar && !/^https?:\/\//i.test(meta.avatar)) {
+            const avatarSrc = meta.avatar.trim().replace(/^['"]|['"]$/g, ''); // 去引号
+            let avatarAbs = path.isAbsolute(avatarSrc) ? avatarSrc : path.resolve(mdDir, avatarSrc);
+            if (fs.existsSync(avatarAbs)) {
+                const avatarDir = path.join(PIC_DIR, slug);
+                if (!fs.existsSync(avatarDir)) fs.mkdirSync(avatarDir, { recursive: true });
+                const avatarExt = path.extname(avatarAbs);
+                const avatarName = 'avatar' + avatarExt;
+                const avatarDest = path.join(avatarDir, avatarName);
+                if (!fs.existsSync(avatarDest)) fs.copyFileSync(avatarAbs, avatarDest);
+                meta.avatar = 'blogs/pic/' + slug.replace(/\\/g, '/') + '/' + avatarName;
+            }
+        }
         const pathParts = slug.split('/');
 
         // 文章名 = 文件名（不含 .md）
@@ -372,12 +387,13 @@ function main() {
 
         const bodyHtml = renderMarkdown(processedBody);
 
-        // 完整数据（含正文）写入独立 JSON
-        const fullPost = { slug, name, title, dirs, date, tags, body: processedBody, bodyHtml };
+        // 完整数据（含正文）写入独立 JSON（meta 中除 body 外的所有字段透传）
+        const { body: _mBody, ...metaRest } = meta;
+        const fullPost = { slug, name, dirs, body: processedBody, bodyHtml, ...metaRest,
+            title, date, tags, summary };
 
         // 索引数据（不含正文）写入 posts.json
         const { body: _, bodyHtml: __, ...indexEntry } = fullPost;
-        indexEntry.summary = summary;
 
         posts.push(indexEntry);
         fullPosts.push(fullPost);
