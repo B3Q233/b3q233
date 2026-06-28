@@ -1,0 +1,15 @@
+{
+  "slug": "客户端/安卓开发/八股/linux",
+  "name": "linux",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/八股"
+  ],
+  "body": "常见的linux命令\r\n\r\n~~~\r\ncd 切换目录。cd ~ 回到家目录，cd - 回到上一次所在的目录。\r\npwd：显示当前工作目录的绝对路径。\r\nmkdir -p：递归创建多级目录。\r\nchmod：修改文件或目录的权限（如 chmod 755 script.sh）。\r\nls -al 列出当前目录下的所有文件\r\ncat：一次性查看文件所有内容。适合看小文件。\r\nfind：在目录中查找文件 find / -name \"*.conf\"\r\nkill：终止进程。 kill -9 <PID>：强制杀死指定 PID 的进程。\r\n~~~\r\n\r\n一个cpu爆满的系统使用什么指令来查看\r\n\r\n~~~\r\ntop\r\n\t操作： 输入 top 后，按下大写的 P，进程会按照 CPU 使用率从高到低排序，查看进程id。\r\ntop -Hp 进程id\r\n\t-H 参数会显示该进程下的所有线程列表。\r\n~~~\r\n\r\n",
+  "bodyHtml": "<p>常见的linux命令</p>\n<pre><code>cd 切换目录。cd ~ 回到家目录，cd - 回到上一次所在的目录。\npwd：显示当前工作目录的绝对路径。\nmkdir -p：递归创建多级目录。\nchmod：修改文件或目录的权限（如 chmod 755 script.sh）。\nls -al 列出当前目录下的所有文件\ncat：一次性查看文件所有内容。适合看小文件。\nfind：在目录中查找文件 find / -name &quot;*.conf&quot;\nkill：终止进程。 kill -9 &lt;PID&gt;：强制杀死指定 PID 的进程。</code></pre>\n<p>一个cpu爆满的系统使用什么指令来查看</p>\n<pre><code>top\n\t操作： 输入 top 后，按下大写的 P，进程会按照 CPU 使用率从高到低排序，查看进程id。\ntop -Hp 进程id\n\t-H 参数会显示该进程下的所有线程列表。</code></pre>",
+  "title": "linux",
+  "date": "2026-04-03",
+  "tags": [],
+  "summary": "常见的linux命令\r \r \r cd 切换目录。cd  回到家目录，cd - 回到上一次所在的目录。\r pwd：显示当前工作目录的绝对路径。\r mkdir -p：递归创建多级目录。\r chmod：修改文件或目录的权限（如 chmod 755 script.sh）。\r ls -al..."
+}

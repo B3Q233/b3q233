@@ -13,6 +13,12 @@ const INDEX_FILE = path.join(OUT_DIR, 'posts.json');
 const POSTS_DIR = path.join(OUT_DIR, 'posts');
 const PIC_DIR = path.join(OUT_DIR, 'pic');
 
+// 博客过滤清单：这些 slug 仍会生成独立 JSON，但不收录到 posts.json 博客列表中
+const BLOG_EXCLUDE = [
+    'test/渲染测试',  // 测试页面
+    '个人简历',       // 简历首页
+];
+
 /**
  * 极简 YAML frontmatter 解析（仅支持单层 key: value 和数组）
  */
@@ -392,10 +398,14 @@ function main() {
         const fullPost = { slug, name, dirs, body: processedBody, bodyHtml, ...metaRest,
             title, date, tags, summary };
 
-        // 索引数据（不含正文）写入 posts.json
+        // 索引数据（不含正文）写入 posts.json（跳过过滤清单中的文章）
         const { body: _, bodyHtml: __, ...indexEntry } = fullPost;
 
-        posts.push(indexEntry);
+        if (!BLOG_EXCLUDE.includes(slug)) {
+            posts.push(indexEntry);
+        } else {
+            console.log(`   ⏭ 已过滤（不入博客列表）: ${slug}`);
+        }
         fullPosts.push(fullPost);
     }
 

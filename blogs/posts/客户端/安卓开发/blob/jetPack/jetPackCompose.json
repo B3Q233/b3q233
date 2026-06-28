@@ -1,0 +1,16 @@
+{
+  "slug": "客户端/安卓开发/blob/jetPack/jetPackCompose",
+  "name": "jetPackCompose",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/blob",
+    "客户端/安卓开发/blob/jetPack"
+  ],
+  "body": "~~~\r\n组件化，将view的结构拆分成一个小的组件，用搭积木的方式组成不同的view，状态是 UI 的唯一真相，UI 是状态的「可视化表现」\r\n绘制步骤：\r\n\t定义组件 -> 组合页面 -> 添加状态交互 -> 挂载（avtivity\\fragment）渲染\r\n\t重组：\r\n\t\tCompose 的「重组」就是「重新执行 Composable 函数，刷新 UI」，当某个可被观察的值发生改变，且被某个UI\t\t  组件观察，则当可被观察的值改变时，会重新调用观察者UI组件方法，重新渲染观察者组件\r\n组成：\r\n\t\r\n使用：\r\n\t使用@Composable注解声明一个Composable函数，表示一个组件\r\n\t在每一个Composable函数内，\r\n生命周期：\r\n状态改变（通知）\r\n导航\r\n~~~\r\n\r\n\r\n\r\n",
+  "bodyHtml": "<pre><code>组件化，将view的结构拆分成一个小的组件，用搭积木的方式组成不同的view，状态是 UI 的唯一真相，UI 是状态的「可视化表现」\n绘制步骤：\n\t定义组件 -&gt; 组合页面 -&gt; 添加状态交互 -&gt; 挂载（avtivity\\fragment）渲染\n\t重组：\n\t\tCompose 的「重组」就是「重新执行 Composable 函数，刷新 UI」，当某个可被观察的值发生改变，且被某个UI\t\t  组件观察，则当可被观察的值改变时，会重新调用观察者UI组件方法，重新渲染观察者组件\n组成：\n\t\n使用：\n\t使用@Composable注解声明一个Composable函数，表示一个组件\n\t在每一个Composable函数内，\n生命周期：\n状态改变（通知）\n导航</code></pre>",
+  "title": "jetPackCompose",
+  "date": "2025-12-05",
+  "tags": [],
+  "summary": "组件化，将view的结构拆分成一个小的组件，用搭积木的方式组成不同的view，状态是 UI 的唯一真相，UI 是状态的「可视化表现」\r 绘制步骤：\r \t定义组件 - 组合页面 - 添加状态交互 - 挂载（avtivity\\fragment）渲染\r \t重组：\r \t\tCompose..."
+}

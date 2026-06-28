@@ -1,0 +1,15 @@
+{
+  "slug": "客户端/练习/小红书UI练习/首页",
+  "name": "首页",
+  "dirs": [
+    "客户端",
+    "客户端/练习",
+    "客户端/练习/小红书UI练习"
+  ],
+  "body": "<img src=\"G:\\123\\天麻片/Screenshot_2026-04-07-19-47-36-18_a2db1b9502c98f2.jpg\" alt=\"Screenshot_2026-04-07-19-47-36-18_a2db1b9502c98f2\" style=\"zoom: 25%;\" />\r\n\r\n~~~\r\n布局：\r\n\t最上方的\r\n交互：\r\n动画：\r\n~~~\r\n\r\n",
+  "bodyHtml": "<img src=\"G:\\123\\天麻片/Screenshot_2026-04-07-19-47-36-18_a2db1b9502c98f2.jpg\" alt=\"Screenshot_2026-04-07-19-47-36-18_a2db1b9502c98f2\" style=\"zoom: 25%;\" />\n<pre><code>布局：\n\t最上方的\n交互：\n动画：</code></pre>",
+  "title": "首页",
+  "date": "2026-04-08",
+  "tags": [],
+  "summary": "<img src=\"G:\\123\\天麻片/Screenshot2026-04-07-19-47-36-18a2db1b9502c98f2.jpg\" alt=\"Screenshot2026-04-07-19-47-36-18a2db1b9502c98f2\" style=\"zoom: 25%;\" /\r..."
+}

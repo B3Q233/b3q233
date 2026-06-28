@@ -1,0 +1,15 @@
+{
+  "slug": "客户端/安卓开发/blob/sealClass",
+  "name": "sealClass",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/blob"
+  ],
+  "body": "~~~kotlin\r\n/**\r\n * 业务层统一结果包装类\r\n * 用于将网络响应、业务状态码和异常信息转化为 UI 可读的格式\r\n */\r\nsealed class ALAPIResult<out T> {\r\n\r\n    /** 成功状态：包含解析后的业务数据 */\r\n    data class Success<out T>(val data:T): ALAPIResult<T>()\r\n\r\n    /** 业务警告/错误状态：请求成功但业务逻辑失败，例如 code =400，url = null等\r\n     * @param message 具体的错误提示\r\n     * @param code 业务错误码\r\n     */\r\n    data class BizError(val message: String, val code: Int? = null) : ALAPIResult<Nothing>()\r\n\r\n    /** 网络/系统异常状态：例如超时、解析崩溃等 */\r\n    data class Failure(val exception: Throwable) : ALAPIResult<Nothing>()\r\n\r\n    /** 加载中状态：用于 UI 进度条展示 */\r\n//    object Loading : ALAPIResult<Nothing>()\r\n\r\n}\r\n~~~\r\n\r\n",
+  "bodyHtml": "<pre><code class=\"language-kotlin\">/**\n * 业务层统一结果包装类\n * 用于将网络响应、业务状态码和异常信息转化为 UI 可读的格式\n */\nsealed class ALAPIResult&lt;out T&gt; {\n\n    /** 成功状态：包含解析后的业务数据 */\n    data class Success&lt;out T&gt;(val data:T): ALAPIResult&lt;T&gt;()\n\n    /** 业务警告/错误状态：请求成功但业务逻辑失败，例如 code =400，url = null等\n     * @param message 具体的错误提示\n     * @param code 业务错误码\n     */\n    data class BizError(val message: String, val code: Int? = null) : ALAPIResult&lt;Nothing&gt;()\n\n    /** 网络/系统异常状态：例如超时、解析崩溃等 */\n    data class Failure(val exception: Throwable) : ALAPIResult&lt;Nothing&gt;()\n\n    /** 加载中状态：用于 UI 进度条展示 */\n//    object Loading : ALAPIResult&lt;Nothing&gt;()\n\n}</code></pre>",
+  "title": "sealClass",
+  "date": "2026-02-10",
+  "tags": [],
+  "summary": "kotlin\r /\r   业务层统一结果包装类\r   用于将网络响应、业务状态码和异常信息转化为 UI 可读的格式\r  /\r sealed class ALAPIResult<out T {\r \r     / 成功状态：包含解析后的业务数据 /\r     data class..."
+}

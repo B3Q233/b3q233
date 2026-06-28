@@ -1,0 +1,15 @@
+{
+  "slug": "客户端/安卓开发/blob/DataStore",
+  "name": "DataStore",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/blob"
+  ],
+  "body": "DataStore 是一种数据存储解决方案，让您可以使用[协议缓冲区](https://developers.google.cn/protocol-buffers?hl=zh-cn)存储键值对或类型化对象。DataStore 使用 Kotlin 协程和 Flow 以异步、一致的事务方式存储数据。\r\n\r\n~~~\r\n一种数据存储方法\r\n~~~\r\n\r\nDataStore 提供两种不同的实现方式\r\n\r\n| **特性**     | **Preferences DataStore**         | **Proto DataStore**                |\r\n| ------------ | --------------------------------- | ---------------------------------- |\r\n| **存储方式** | 键值对（Key-Value）               | 结构化对象（Typed Objects）        |\r\n| **类型安全** | 不提供（类似 SP，需手动定义 Key） | **完全提供**（编译时类型检查）     |\r\n| **底层协议** | XML/JSON 序列化                   | **Protocol Buffers**（更小、更快） |\r\n| **学习成本** | 低，上手快                        | 略高，需学习 `.proto` 语法         |\r\n| **适用场景** | 简单的设置开关、用户 ID 等        | 复杂的用户信息、配置表             |\r\n\r\n**完全异步：** 利用 Kotlin 协程，所有磁盘 I/O 都在非 UI 线程执行。\r\n\r\n**响应式编程：** 数据以 `Flow` 形式暴露，UI 可以实时观察并自动更新。\r\n\r\n**一致性保证：** 更新操作是事务性的（Atomic updates），要么全成功，要么全失败。\r\n\r\n**错误处理：** 内置了良好的异常处理机制（如损坏的文件处理）。\r\n\r\n**内置加密（2026 更新）：** 随着 `androidx.datastore:datastore-tink` 库的推出，现在支持使用 Tink 库进行简单的 AEAD 加密，不再像以前那样需要手动封装加密逻辑。\r\n\r\n### 简单使用\r\n\r\n创建 DataStore  实例\r\n\r\n~~~kotlin\r\n~~~\r\n\r\n",
+  "bodyHtml": "<p>DataStore 是一种数据存储解决方案，让您可以使用<a href=\"https://developers.google.cn/protocol-buffers?hl=zh-cn\">协议缓冲区</a>存储键值对或类型化对象。DataStore 使用 Kotlin 协程和 Flow 以异步、一致的事务方式存储数据。</p>\n<pre><code>一种数据存储方法</code></pre>\n<p>DataStore 提供两种不同的实现方式</p>\n<table><thead><tr><th><strong>特性</strong></th><th><strong>Preferences DataStore</strong></th><th><strong>Proto DataStore</strong></th></tr></thead><tbody><tr><td><strong>存储方式</strong></td><td>键值对（Key-Value）</td><td>结构化对象（Typed Objects）</td></tr><tr><td><strong>类型安全</strong></td><td>不提供（类似 SP，需手动定义 Key）</td><td><strong>完全提供</strong>（编译时类型检查）</td></tr><tr><td><strong>底层协议</strong></td><td>XML/JSON 序列化</td><td><strong>Protocol Buffers</strong>（更小、更快）</td></tr><tr><td><strong>学习成本</strong></td><td>低，上手快</td><td>略高，需学习 <code>.proto</code> 语法</td></tr><tr><td><strong>适用场景</strong></td><td>简单的设置开关、用户 ID 等</td><td>复杂的用户信息、配置表</td></tr></tbody></table>\n<p><strong>完全异步：</strong> 利用 Kotlin 协程，所有磁盘 I/O 都在非 UI 线程执行。</p>\n<strong>响应式编程：</strong> 数据以 <code>Flow</code> 形式暴露，UI 可以实时观察并自动更新。\n<p><strong>一致性保证：</strong> 更新操作是事务性的（Atomic updates），要么全成功，要么全失败。</p>\n<p><strong>错误处理：</strong> 内置了良好的异常处理机制（如损坏的文件处理）。</p>\n<strong>内置加密（2026 更新）：</strong> 随着 <code>androidx.datastore:datastore-tink</code> 库的推出，现在支持使用 Tink 库进行简单的 AEAD 加密，不再像以前那样需要手动封装加密逻辑。\n<h3>简单使用</h3>\n<p>创建 DataStore  实例</p>\n<pre><code class=\"language-kotlin\"></code></pre>",
+  "title": "DataStore",
+  "date": "2026-03-14",
+  "tags": [],
+  "summary": "DataStore 是一种数据存储解决方案，让您可以使用协议缓冲区存储键值对或类型化对象。DataStore 使用 Kotlin 协程和 Flow 以异步、一致的事务方式存储数据。\r \r \r 一种数据存储方法\r \r \r DataStore 提供两种不同的实现方式\r \r  特性     ..."
+}

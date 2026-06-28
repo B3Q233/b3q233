@@ -1,128 +1,701 @@
 [
   {
-    "slug": "hello-world",
-    "name": "hello-world",
-    "dirs": [],
-    "tags": [
-      "技术",
-      "博客"
-    ],
-    "title": "hello-world",
-    "date": "2026-06-28",
-    "summary": "欢迎来到我的个人博客！这是第一篇示例文章。  关于这个博客 这个博客采用纯静态架构： - Markdown 编写：所有文章使用 Markdown 格式 - 自动索引：构建脚本自动扫描目录生成文章列表 - 零依赖部署：可部署到 GitHub Pages、Vercel 等任意静态托管  代码示例 ..."
-  },
-  {
-    "slug": "test/渲染测试",
-    "name": "渲染测试",
+    "slug": "客户端/Jetpack_Compose_学习大纲",
+    "name": "Jetpack_Compose_学习大纲",
     "dirs": [
-      "test"
+      "客户端"
     ],
-    "title": "Markdown 渲染测试",
-    "date": "2026-06-28",
-    "tags": [
-      "测试",
-      "渲染",
-      "markdown"
-    ],
-    "summary": "覆盖所有 markdown 渲染功能的综合测试用例"
-  },
-  {
-    "slug": "vibecode",
-    "name": "vibecode",
-    "dirs": [],
-    "title": "vibecode",
-    "date": "2026-06-28",
+    "title": "Jetpack_Compose_学习大纲",
+    "date": "2026-05-07",
     "tags": [],
-    "summary": "test 114514\r \r  测试\r \r 测试用"
+    "summary": "共 30 节课，从零基础到实战进阶，循序渐进掌握现代 Android UI 开发。 ---  📚 模块一：基础入门（第 1–5 课）  第 1 课：Jetpack Compose 概览与环境搭建 - 学习目标：理解 Compose 的设计哲学与传统 View 系统的核心差异 - 声明式 UI..."
   },
   {
-    "slug": "个人简历",
-    "name": "b3q",
-    "dirs": [],
-    "title": "个人简历",
-    "date": "2026-06-28",
-    "tags": [
-      "简历"
-    ],
-    "avatar": "blogs/pic/个人简历/avatar.jpg",
-    "school": "河南农业大学",
-    "major": "计算机科学与技术",
-    "degree": "本科",
-    "period": "2022.09 - 2026.07",
-    "email": "y3322607850@163.com",
-    "english": "CET-4",
-    "rank": "前 5%",
-    "summary": "严先明 — 河南农业大学 计算机科学与技术 2026 届"
-  },
-  {
-    "slug": "安卓项目/仿网易云音乐",
-    "name": "仿网易云音乐",
+    "slug": "客户端/安卓开发/实习日志/工作日志 420",
+    "name": "工作日志 420",
     "dirs": [
-      "安卓项目"
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/实习日志"
     ],
-    "title": "仿网易云音乐",
-    "date": "2026-06-28",
+    "title": "工作日志 420",
+    "date": "2026-04-22",
     "tags": [],
-    "summary": "c++\r 仿网易云音乐\r \t技术：mvvm 架构，okHttp网络请求，kotlin，协程，service 前台显示，音乐三级缓存（本地，内存，音乐直接链接），将service中的player的状态暴露出来给一个单例类playerConnection。该类通过stateFlow提供监听流。音乐播发的..."
+    "summary": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000..."
   },
   {
-    "slug": "安卓项目/思路",
-    "name": "思路",
+    "slug": "客户端/安卓开发/实习日志/热重载",
+    "name": "热重载",
     "dirs": [
-      "安卓项目"
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/实习日志"
     ],
-    "title": "思路",
-    "date": "2026-06-28",
+    "title": "热重载",
+    "date": "2026-04-21",
     "tags": [],
-    "summary": "总体架构\r \r \r 基础配置模块\r 数据层模块\r 播放核心模块\r 业务页面模块\r UI模块\r \r \r 主要功能\r \r 可以根据功能依赖关系分为主要功能，次要功能和其它功能\r \r \r 被大部分次要功能依赖的功能为主要功能\r 次要功能必须依赖主要功能实现\r 独立性比较高的功能为其它功能\r \r \r \r..."
+    "summary": "热重载\r \r 在真实运行的应用上即时刷新 UI 变化，简单来说，在修改代码之后不需要重新编译，重新运行，就可以在真机上实时显示的技术\r \r \r \r 目前KMP支持的热重载的平台\r \r Android\r \r Desktop \r \r iOS  暂时没有支持\r \r \r \r 由于只使用到了ios 和..."
   },
   {
-    "slug": "Java 基础",
+    "slug": "客户端/安卓开发/安卓面试题",
+    "name": "安卓面试题",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "安卓面试题",
+    "date": "2026-04-13",
+    "tags": [],
+    "summary": "Glide 的缓存机制是什么\r \r \r 活动资源 (Active Resources)：正在使用的图片\r 内存缓存 (Memory cache)：内存缓存中的图片\r 资源类型（Resource）：磁盘缓存中转换过后的图片\r 数据来源 (Data)：磁盘缓存中的原始图片\r \r \r <img..."
+  },
+  {
+    "slug": "客户端/安卓开发/依赖",
+    "name": "依赖",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "依赖",
+    "date": "2026-04-12",
+    "tags": [],
+    "summary": "settings.gradle.kts\r \r \r pluginManagement {\r     repositories {\r         maven { url = uri(\"https://maven.aliyun.com/repository/public\") }\r        ..."
+  },
+  {
+    "slug": "客户端/安卓面试相关/面试题",
+    "name": "面试题",
+    "dirs": [
+      "客户端",
+      "客户端/安卓面试相关"
+    ],
+    "title": "面试题",
+    "date": "2026-04-12",
+    "tags": [],
+    "summary": "场景\r \r 怎么判断app在后台\r \r \r 前台App：位于屏幕最顶端，能够与用户直接交互的应用，处于onResume状态\r 后台App：用户看不到，或者已经点击了Home/切换到其它应用，优先级较低，随时可能被杀死\r \r \r \r \r \r 1.ActivityLifeCycleCallBack\r ..."
+  },
+  {
+    "slug": "客户端/安卓面试相关/项目",
+    "name": "项目",
+    "dirs": [
+      "客户端",
+      "客户端/安卓面试相关"
+    ],
+    "title": "项目",
+    "date": "2026-04-10",
+    "tags": [],
+    "summary": "仿网易云音乐APP\r \r \r 内容：模拟主流音乐平台的深度定制化音频播放器，实现了从发现音乐、在线试听到本地管理的全链路功能\r \r 核心架构：\r \t基于 MVVM 思想，利用 Kotlin Flow (StateFlow/SharedFlow) 构建响应式数据流，通过 UiState \t \r..."
+  },
+  {
+    "slug": "客户端/安卓面试相关/UI实践/基础",
+    "name": "基础",
+    "dirs": [
+      "客户端",
+      "客户端/安卓面试相关",
+      "客户端/安卓面试相关/UI实践"
+    ],
+    "title": "基础",
+    "date": "2026-04-09",
+    "tags": [],
+    "summary": "像素单位\r \r dp sp px\r \r \r px 对应的屏幕上的实际像素点\r dp 设备独立像素，一种基于像素密度的抽象单位，它在每英寸160点的显示屏幕上 1 dp = 1 px\r sp 放大像素(比例像素)，与刻度无关，可以根据用户的字体大小首选项进行缩放，主要用来处理字体的大小\r px =..."
+  },
+  {
+    "slug": "客户端/安卓面试相关/基础/组件和UI绘制",
+    "name": "组件和UI绘制",
+    "dirs": [
+      "客户端",
+      "客户端/安卓面试相关",
+      "客户端/安卓面试相关/基础"
+    ],
+    "title": "组件和UI绘制",
+    "date": "2026-04-08",
+    "tags": [],
+    "summary": "四大组件\r \r Activity\r \r \r 一个窗口，用于核心的ui显示\r 生命周期：\r \tonCreate\r \t\t创建时调用，用于初始化UI，绑定数据设置变量，只执行一次\r \tonStart\r \t\tActivity即将变得可见，不能交互，注册监听器\r \tonResume\r..."
+  },
+  {
+    "slug": "客户端/练习/小红书UI练习/首页",
+    "name": "首页",
+    "dirs": [
+      "客户端",
+      "客户端/练习",
+      "客户端/练习/小红书UI练习"
+    ],
+    "title": "首页",
+    "date": "2026-04-08",
+    "tags": [],
+    "summary": "<img src=\"G:\\123\\天麻片/Screenshot2026-04-07-19-47-36-18a2db1b9502c98f2.jpg\" alt=\"Screenshot2026-04-07-19-47-36-18a2db1b9502c98f2\" style=\"zoom: 25%;\" /\r..."
+  },
+  {
+    "slug": "客户端/面试/1",
+    "name": "1",
+    "dirs": [
+      "客户端",
+      "客户端/面试"
+    ],
+    "title": "1",
+    "date": "2026-04-08",
+    "tags": [],
+    "summary": "自我介绍\r \r 项目：\r \t技术栈不一样，只讲了一下缓存机制，双层缓存怎么设计，雪崩了怎么办\r \r Java基础：\r \t内存区域，以及各个部分作用\r \t垃圾回收，什么算法，什么可以作为GCroot\r \t四种引用\r \tG1回收器\r \t类加载，过程，作用\r \t双亲委派，作用，怎么避免\r \r \r..."
+  },
+  {
+    "slug": "八股/Java 基础",
     "name": "Java 基础",
-    "dirs": [],
+    "dirs": [
+      "八股"
+    ],
     "title": "Java 基础",
     "date": "2026-04-07",
     "tags": [],
     "summary": "JVM JDK JRE\r \r \r JVM java 虚拟机\r JDK 一个用于开发java程序的工具包\r JRE java运行环境\r java 程序 通过编译成字节码.class 然后在JVM上运行\r 字节码：\r \tJVM 可以理解的代码 .class\r \r \r \r \r \r \r 基本数据类型\r \r..."
   },
   {
-    "slug": "安卓项目/布局",
-    "name": "布局",
+    "slug": "八股/java 集合",
+    "name": "java 集合",
     "dirs": [
-      "安卓项目"
+      "八股"
     ],
-    "title": "布局",
+    "title": "java 集合",
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "集合\r \r \r 叫作容器，主要是由两大接口派生而来：\r \t一个是 Collection接口，主要用于存放单一元素；\r \t另一个是 Map 接口，主要用于存放键值对。\r \r \r \r \r List\r \r \r ArrayList：Object[] 数组。\r Vector：Object[] 数组。\r..."
+  },
+  {
+    "slug": "八股/数据库",
+    "name": "数据库",
+    "dirs": [
+      "八股"
+    ],
+    "title": "数据库",
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "<img src=\"https://oss.javaguide.cn/javaguide/13526879-3037b144ed09eb88.png\" alt=\"img\" style=\"zoom:50%;\" /\r \r B+\r \r mermaid\r graph TD\r     %% 内部节点 -..."
+  },
+  {
+    "slug": "八股/计算机网络",
+    "name": "计算机网络",
+    "dirs": [
+      "八股"
+    ],
+    "title": "计算机网络",
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "分层\r \r \r 应用层\t\t\t\t为计算机用户提供服务\r 表示层\t\t\t\t数据处理（解码，加密传输）\r 会话层\t\t\t\t管理应用程序之间的会话\r 传输层\t\t\t\t为两台主机进程之间的通信提供通用的数据传输服务\r 网络层\t\t\t\t路由和寻址（决定数据在网络的游走路径）\r 数据链路层\t\t  ..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/Java 基础",
+    "name": "Java 基础",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "Java 基础",
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "JVM JDK JRE\r \r \r JVM java 虚拟机\r JDK 一个用于开发java程序的工具包\r JRE java运行环境\r java 程序 通过编译成字节码.class 然后在JVM上运行\r 字节码：\r \tJVM 可以理解的代码 .class\r \r \r \r \r \r \r 基本数据类型\r \r..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/java 集合",
+    "name": "java 集合",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "java 集合",
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "集合\r \r \r 叫作容器，主要是由两大接口派生而来：\r \t一个是 Collection接口，主要用于存放单一元素；\r \t另一个是 Map 接口，主要用于存放键值对。\r \r \r \r \r List\r \r \r ArrayList：Object[] 数组。\r Vector：Object[] 数组。\r..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/数据库",
+    "name": "数据库",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "数据库",
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "<img src=\"https://oss.javaguide.cn/javaguide/13526879-3037b144ed09eb88.png\" alt=\"img\" style=\"zoom:50%;\" /\r \r B+\r \r mermaid\r graph TD\r     %% 内部节点 -..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/计算机网络",
+    "name": "计算机网络",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "计算机网络",
+    "date": "2026-04-07",
+    "tags": [],
+    "summary": "分层\r \r \r 应用层\t\t\t\t为计算机用户提供服务\r 表示层\t\t\t\t数据处理（解码，加密传输）\r 会话层\t\t\t\t管理应用程序之间的会话\r 传输层\t\t\t\t为两台主机进程之间的通信提供通用的数据传输服务\r 网络层\t\t\t\t路由和寻址（决定数据在网络的游走路径）\r 数据链路层\t\t  ..."
+  },
+  {
+    "slug": "八股/个人介绍",
+    "name": "个人介绍",
+    "dirs": [
+      "八股"
+    ],
+    "title": "个人介绍",
+    "date": "2026-04-06",
+    "tags": [],
+    "summary": "面试官您好，我是严先明，就读于河南农业大学，目前已保研至安徽大学。\r \r 在技术积累上，核心技术栈为 Java/Kotlin ，同时具备算法功底，曾获得 CCPC 邀请赛铜牌与蓝桥杯国赛二等奖，了解常见的数据结构和算法；\r \r..."
+  },
+  {
+    "slug": "八股/并发",
+    "name": "并发",
+    "dirs": [
+      "八股"
+    ],
+    "title": "并发",
+    "date": "2026-04-06",
+    "tags": [],
+    "summary": "线程\r \r \r cpu 密集型任务：\r \t需要cpu长期参与，矩阵运算\r \t多线程\r io 密集型任务：\r \t并不需要cpu长期参与，磁盘io底层时靠DMA，不需要cpu参与\r \t跟底层速度-释放线程提升cpu的利用率\r 多线程：\r \t问题：\r \t\t内存泄漏，死锁，线程不安全\r \t线程安全：\r..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/个人介绍",
+    "name": "个人介绍",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "个人介绍",
+    "date": "2026-04-06",
+    "tags": [],
+    "summary": "面试官您好，我是严先明，就读于河南农业大学，目前已保研至安徽大学。\r \r 在技术积累上，核心技术栈为 Java/Kotlin ，同时具备算法功底，曾获得 CCPC 邀请赛铜牌与蓝桥杯国赛二等奖，了解常见的数据结构和算法；\r \r..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/并发",
+    "name": "并发",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "并发",
+    "date": "2026-04-06",
+    "tags": [],
+    "summary": "线程\r \r \r cpu 密集型任务：\r \t需要cpu长期参与，矩阵运算\r \t多线程\r io 密集型任务：\r \t并不需要cpu长期参与，磁盘io底层时靠DMA，不需要cpu参与\r \t跟底层速度-释放线程提升cpu的利用率\r 多线程：\r \t问题：\r \t\t内存泄漏，死锁，线程不安全\r \t线程安全：\r..."
+  },
+  {
+    "slug": "八股/计算机基础",
+    "name": "计算机基础",
+    "dirs": [
+      "八股"
+    ],
+    "title": "计算机基础",
+    "date": "2026-04-04",
+    "tags": [],
+    "summary": "物理内存虚拟内存\r \r \r 物理内存：\r \t实际的硬件，地址是固定\r 虚拟内存：\r \t是对物理内存的访问的抽象\r \t将一块物理内存的地址映射一块独立的内存区域\r \t用于：\r \t\t多次程序之间的隔离，防止一个程序修改另一个程序的数据\r \t\t内存交换，物理内存不够用时，将暂时不用的数据放置在磁盘中\r..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/计算机基础",
+    "name": "计算机基础",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "计算机基础",
+    "date": "2026-04-04",
+    "tags": [],
+    "summary": "物理内存虚拟内存\r \r \r 物理内存：\r \t实际的硬件，地址是固定\r 虚拟内存：\r \t是对物理内存的访问的抽象\r \t将一块物理内存的地址映射一块独立的内存区域\r \t用于：\r \t\t多次程序之间的隔离，防止一个程序修改另一个程序的数据\r \t\t内存交换，物理内存不够用时，将暂时不用的数据放置在磁盘中\r..."
+  },
+  {
+    "slug": "八股/JVM",
+    "name": "JVM",
+    "dirs": [
+      "八股"
+    ],
+    "title": "JVM",
+    "date": "2026-04-03",
+    "tags": [],
+    "summary": "JVM\r \r \r Java Virtual Machine，Java 虚拟机\r 本质是一个程序，模拟了一台虚拟计算机\r Java 代码编译成字节码，由 JVM 解释执行\r \r 好处：一次编译，到处运行\r       Windows/Mac/Linux 各自有对应的 JVM\r      ..."
+  },
+  {
+    "slug": "八股/linux",
+    "name": "linux",
+    "dirs": [
+      "八股"
+    ],
+    "title": "linux",
+    "date": "2026-04-03",
+    "tags": [],
+    "summary": "常见的linux命令\r \r \r cd 切换目录。cd  回到家目录，cd - 回到上一次所在的目录。\r pwd：显示当前工作目录的绝对路径。\r mkdir -p：递归创建多级目录。\r chmod：修改文件或目录的权限（如 chmod 755 script.sh）。\r ls -al..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/JVM",
+    "name": "JVM",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "JVM",
+    "date": "2026-04-03",
+    "tags": [],
+    "summary": "JVM\r \r \r Java Virtual Machine，Java 虚拟机\r 本质是一个程序，模拟了一台虚拟计算机\r Java 代码编译成字节码，由 JVM 解释执行\r \r 好处：一次编译，到处运行\r       Windows/Mac/Linux 各自有对应的 JVM\r      ..."
+  },
+  {
+    "slug": "客户端/安卓开发/八股/linux",
+    "name": "linux",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/八股"
+    ],
+    "title": "linux",
+    "date": "2026-04-03",
+    "tags": [],
+    "summary": "常见的linux命令\r \r \r cd 切换目录。cd  回到家目录，cd - 回到上一次所在的目录。\r pwd：显示当前工作目录的绝对路径。\r mkdir -p：递归创建多级目录。\r chmod：修改文件或目录的权限（如 chmod 755 script.sh）。\r ls -al..."
+  },
+  {
+    "slug": "客户端/安卓开发/面试题",
+    "name": "面试题",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "面试题",
+    "date": "2026-03-24",
+    "tags": [],
+    "summary": "00 mvc 和 mvvm\r \r \r MVC (Model-View-Controller)\r 分为三层\r \tmodel 模型\t\t\t负责数据逻辑，数据库或者网络操作\r \tview 视图\t\t\t\tXML布局文件\r \tcontroller 控制器\t   主要是由 Activity/Fragment..."
+  },
+  {
+    "slug": "客户端/安卓开发/数据库事务",
+    "name": "数据库事务",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "数据库事务",
+    "date": "2026-03-21",
+    "tags": [],
+    "summary": "事务（Transaction） 是确保数据一致性和安全性的基石。\r \r 简单来说，事务就是将一组操作包装成一个“原子单元”：要么全部成功，要么全部失败。\r \r  核心特性：ACID 原则\r \r 面试时，ACID 是必须背出的四大金刚：\r \r -   原子性 (Atomicity)：..."
+  },
+  {
+    "slug": "客户端/安卓开发/自我介绍",
+    "name": "自我介绍",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "自我介绍",
+    "date": "2026-03-21",
+    "tags": [],
+    "summary": "面试官您好，我叫严先明，是河南农业大学计算机科学与技术专业大四学生，绩点排名专业前5%，已保研至安徽大学，可提供至少3个月的实习时间。我在安卓开发方面有扎实的实践经验，独立完成了天气预报APP和仿网易云音乐APP两个完整项目，熟练掌握Kotlin、MVVM架构、Coroutines/Flow响应式编..."
+  },
+  {
+    "slug": "客户端/安卓开发/项目/InnerTune",
+    "name": "InnerTune",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/项目"
+    ],
+    "title": "InnerTune",
+    "date": "2026-03-20",
+    "tags": [],
+    "summary": "nnerTune 是一款 开源、无广告的 YouTube Music 第三方客户端（适用于 Android 系统），核心定位是为用户提供更简洁、自由的 YouTube Music 音乐播放体验，同时支持丰富的个性化功能。其本质是通过解析 YouTube Music..."
+  },
+  {
+    "slug": "客户端/安卓开发/java面试题",
+    "name": "java面试题",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "java面试题",
+    "date": "2026-03-17",
+    "tags": [],
+    "summary": "Java 中接口和抽象类的区别是什么\r \r   共同点\r \r -   不可实例化：你不能直接 new 一个接口或抽象类。\r -   包含抽象方法：两者都可以定义没有具体实现的方法，强制子类去实现。\r -   支持多态：允许使用父类/接口引用指向子类对象。\r \r \r \r -  ..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/DataStore",
+    "name": "DataStore",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "DataStore",
+    "date": "2026-03-14",
+    "tags": [],
+    "summary": "DataStore 是一种数据存储解决方案，让您可以使用协议缓冲区存储键值对或类型化对象。DataStore 使用 Kotlin 协程和 Flow 以异步、一致的事务方式存储数据。\r \r \r 一种数据存储方法\r \r \r DataStore 提供两种不同的实现方式\r \r  特性     ..."
+  },
+  {
+    "slug": "客户端/安卓开发/面试题-计算机网络",
+    "name": "面试题-计算机网络",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "面试题-计算机网络",
+    "date": "2026-03-13",
+    "tags": [],
+    "summary": "从输入 URL 到页面展示到底发生了什么？\r \r 在浏览器中输入指定网页的 URL。\r \r 浏览器通过 DNS 协议，获取域名对应的 IP 地址。\r \r 浏览器根据 IP 地址和端口号，向目标服务器发起一个 TCP 连接请求。\r \r 浏览器在 TCP 连接上，向服务器发送一个 HTTP..."
+  },
+  {
+    "slug": "客户端/案例",
+    "name": "案例",
+    "dirs": [
+      "客户端"
+    ],
+    "title": "案例",
+    "date": "2026-03-13",
+    "tags": [],
+    "summary": "作为 iOS 和安卓兼职客户端研发，如何设计方案，支持根据服务器下发的 JSON 配置动态生成电商促销活动页（需支持添加图片、按钮、卡片等组件）？\r \r \r view :\r \tcollect\r viewModel:\r \t网络接口Reposity\r model\r \tDto - model\r \r \r..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/flow",
+    "name": "flow",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "flow",
+    "date": "2026-03-11",
+    "tags": [],
+    "summary": "2. 自定义 View 和自定义 ViewGroup 的实现流程？\r \t\r 3. 安卓界面刷新的垂直同步信号是什么，有什么作用？\r 4. 如何从内存和卡顿两个角度优化 UI 性能？\r 5. 安卓中 ANR 的触发阈值是什么，底层是如何检测 ANR 的？\r 6...."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/ExoPlayer",
+    "name": "ExoPlayer",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "ExoPlayer",
+    "date": "2026-03-08",
+    "tags": [],
+    "summary": "ExoPlayer  \r \r 一个用于媒体（音频，视频）播放的类\r \r \r 如何初始化\r 怎么使用\r \t- 播放用的是什么\r \t\t- 封装的mediaItem\r \t\t- 怎么生成mediaItem\r \t- 怎么开发播放\r \t- 怎么停止播放\r \t- 怎么重新播放\r \t-..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/总结",
+    "name": "总结",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "总结",
+    "date": "2026-03-08",
+    "tags": [],
+    "summary": "是 Android 的四大组件之一，是 Android 中实现程序后台运行的解决方案，适合去执行那些不需要和用户交互而且还要求长期运行的任务。\r \r Service 的运行不依赖于任何用户界面，即使程序被切换到后台，或者用户打开了另外一个应用程序，Service 仍然能够保持正常运行。\r \r..."
+  },
+  {
+    "slug": "客户端/安卓开发/操作系统面试题",
+    "name": "操作系统面试题",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "操作系统面试题",
     "date": "2026-03-05",
     "tags": [],
-    "summary": "整体架构 \r \tMVVM\r 分层\r     datasource\r \trepository\r \t viewmodel\r \t   view\r 使用Result封装网络数据源数据\r 使用UiState封装Result数据和本地数据源数据\r // 专门用于 UI 层的状态封装\r sealed class..."
+    "summary": "IO 过程\r \r  硬件（磁盘/网络）、内核空间 和 用户空间 之间流转。\r \r 在传统的 IO 中，数据从硬盘到你的代码逻辑，需要经历 2 次上下文切换 和 2 次数据拷贝：\r \r 1.  用户态 → 内核态：你的 Java 代码调用 read()，系统切换到内核模式。\r 2.  DMA..."
   },
   {
-    "slug": "安卓项目/前置",
-    "name": "前置",
+    "slug": "客户端/安卓开发/blob/协程",
+    "name": "协程",
     "dirs": [
-      "安卓项目"
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
     ],
-    "title": "前置",
-    "date": "2025-12-25",
+    "title": "协程",
+    "date": "2026-03-03",
     "tags": [],
-    "summary": "已学：\r \tKotlin： 基础 \r \tAndroid: Activity Fragment Service ContetnProvider\r \t存储：\t   \r \t网络：\t   \r \t多媒体处理：\r \t设计模式：\r \t第三方库：\r \r \r  一、基础编程语言与工具\r \r 1.  Kotlin..."
+    "summary": "用户态和内核态\r  - 如何切换\r  - 切换会发生什么\r  - 为什么切换会很耗时\r 线程\r  - 是什么\r  - 为什么线程切换很耗时\r 协程\r  - 是什么\r  - 为了解决什么问题提出的\r  - 是如何解决问题的\r  - 组成是什么\r  - 如何使用\r  - 阻塞和挂起\r  -..."
   },
   {
-    "slug": "C# 入门",
-    "name": "C# 入门",
-    "dirs": [],
-    "title": "C# 入门",
-    "date": "2025-07-06",
+    "slug": "客户端/安卓开发/blob/控件/AppBarLayout",
+    "name": "AppBarLayout",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob",
+      "客户端/安卓开发/blob/控件"
+    ],
+    "title": "AppBarLayout",
+    "date": "2026-03-03",
     "tags": [],
-    "summary": "C 程序文件格式\r \r  1. .cs 文件\r \r 这是最常见的 C 源文件格式，用于编写 C 代码。每个 .cs 文件可以包含类、接口、结构体、枚举等类型的定义，也可以包含命名空间、方法、属性等成员的实现。\r \r  用途\r \r 用于编写 C 程序的源代码，是开发过程中主要的文件类型。\r \r ..."
+    "summary": "AppBarLayout 是 Android Material Design 组件库中的一个核心控件。它本质上是一个垂直方向的线性布局（LinearLayout），专门用于实现顶部应用栏（App Bar）的各种滚动行为和视觉效果。\r \r 使用场景\r \r AppBarLayout..."
   },
   {
-    "slug": "WPF",
-    "name": "WPF",
-    "dirs": [],
-    "title": "WPF",
-    "date": "2025-04-23",
+    "slug": "客户端/安卓开发/blob/控件/CoordinatorLayout",
+    "name": "CoordinatorLayout",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob",
+      "客户端/安卓开发/blob/控件"
+    ],
+    "title": "CoordinatorLayout",
+    "date": "2026-03-03",
     "tags": [],
-    "summary": "XAML 基础\r \r XAML即可扩展应用程序标记语言，是一种由微软开发的基于 XML 的声明式标记语言，用于描述用户界面的结构和外观。\r \r XAML 文件是通常具有 .xaml 扩展名的 XML 文件。 可通过任何 XML 编码对文件进行编码，但通常以 UTF-8 编码。\r \r..."
+    "summary": "CoordinatorLayout\r \r CoordinatorLayout 是 一个 超级 FrameLayout 能让嵌套在其中的子 View 彼此“感知”对方的状态。例如，当一个 View 移动或缩放时，另一个 View 可以随之做出反应。\r \r 用于以下场景\r \r \r 场景一：折叠式标题栏..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/控件/viewPage",
+    "name": "viewPage",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob",
+      "客户端/安卓开发/blob/控件"
+    ],
+    "title": "viewPage",
+    "date": "2026-03-03",
+    "tags": [],
+    "summary": "在安卓开发中，ViewPager2 是用来实现页面左右滑动（或上下滑动）的核心组件。它是对旧版 ViewPager 的彻底重构，基于 RecyclerView 实现，因此继承了 RecyclerView 的所有优点（如高效的回收机制）。"
+  },
+  {
+    "slug": "客户端/安卓开发/ques",
+    "name": "ques",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发"
+    ],
+    "title": "ques",
+    "date": "2026-02-21",
+    "tags": [],
+    "summary": "使用glide加载图片给自定义view，但是view中有动画，为了防止内存泄漏需要在onDetachedFromWindow方法中cancel动画，但是我顺便清理掉了view所需要的图片，由于图片之后在onBindViewHolder方法中加载，那么当我把一个item移除可视区域，会触发onDeta..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/sealClass",
+    "name": "sealClass",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "sealClass",
+    "date": "2026-02-10",
+    "tags": [],
+    "summary": "kotlin\r /\r   业务层统一结果包装类\r   用于将网络响应、业务状态码和异常信息转化为 UI 可读的格式\r  /\r sealed class ALAPIResult<out T {\r \r     / 成功状态：包含解析后的业务数据 /\r     data class..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/okHttp",
+    "name": "okHttp",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "okHttp",
+    "date": "2026-02-03",
+    "tags": [],
+    "summary": "OkHttp 是由 Square 公司开源的一个高效的 Java/Android HTTP 客户端。它目前是 Android 开发中最事实上的标准网络库，用于处理网络请求。\r \r \r 主要步骤：\r \t构建客户端 构建请求 发送请求 接受响应 解析响应\r 1.构建客户端\r \t- 如何构建\r \t-..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/文件操作",
+    "name": "文件操作",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "文件操作",
+    "date": "2026-02-02",
+    "tags": [],
+    "summary": "文件写入读取过程\r 文件读写有什么问题？\r \t- 内存操作速度和磁盘速度差距大 - 需要利用缓存区\r \t- 不使用流的步骤\r \t\t- 构建缓存区 ...\r 流是什么，为什么要使用\r \t- 流是一类封装封装好的接口，用于简化文件读写（上面的过程）\r \t- 字节流和字符流\r \t-..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/设计模式",
+    "name": "设计模式",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "设计模式",
+    "date": "2026-01-17",
+    "tags": [],
+    "summary": "是什么\r 用处是什么\r 为什么要使用\r 什么条件下使用\r 如何使用\r \r \r 在软件工程领域，设计模式是一套通用的可复用的解决方案，用来解决在软件设计过程中产生的通用问题。它不是一个可以直接转换成源代码的设计，只是一套在软件系统设计过程中程序员应该遵循的最佳实践准则。\r \r  工厂模式\r \r ..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/网络通信",
+    "name": "网络通信",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "网络通信",
+    "date": "2025-12-29",
+    "tags": [],
+    "summary": "通过网络请求获取服务器上数据\r \r OkHttp\r \r OkHttp 是由 Square 公司开发的一款高效的 HTTP/HTTPS 客户端，支持 Android 和 Java 平台，它解决了传统 HttpURLConnection 用法繁琐、性能差的问题，也是..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/自定义View",
+    "name": "自定义View",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "自定义View",
+    "date": "2025-12-24",
+    "tags": [],
+    "summary": "基础步骤\r \r \r 所谓在手机上显示App,简单可以理解成在手机屏幕上画画，将不同的控件根据其属性，绘制在屏幕上，组成手机应用的视觉效果，而实现上面的过程，关键是对应的控件类和其包含方法\r 而画画需要关注\r \t绘制的大小 \t\t\t 画多大\r \t绘制的位置 \t\t\t 在哪画\r..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/jetPack/jetPackCompose",
+    "name": "jetPackCompose",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob",
+      "客户端/安卓开发/blob/jetPack"
+    ],
+    "title": "jetPackCompose",
+    "date": "2025-12-05",
+    "tags": [],
+    "summary": "组件化，将view的结构拆分成一个小的组件，用搭积木的方式组成不同的view，状态是 UI 的唯一真相，UI 是状态的「可视化表现」\r 绘制步骤：\r \t定义组件 - 组合页面 - 添加状态交互 - 挂载（avtivity\\fragment）渲染\r \t重组：\r \t\tCompose..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/jetPack/Room",
+    "name": "Room",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob",
+      "客户端/安卓开发/blob/jetPack"
+    ],
+    "title": "Room",
+    "date": "2025-11-30",
+    "tags": [],
+    "summary": "view:\r \t数据的展示\r \tactivity\\fragment\r viewModel:\r \t逻辑处理\r \t数据绑定\r \tliveData\r Model:\r \t数据持久化\r \t数据获取\r \tRepository：数据访问接口\r \tDAO：数据具体操作接口\r \tDaoImp：数据接口的具体实现\r..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/ContentProvider",
+    "name": "ContentProvider",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "ContentProvider",
+    "date": "2025-11-24",
+    "tags": [],
+    "summary": "ContentProvider\r \r ContentProvider 是 Android 中一个非常核心且强大的组件，它主要用于在不同应用程序之间共享数据，并提供了一套标准的、安全的接口来访问和修改这些数据。\r \r 可以把它想象成一个公共的数据仓库，任何有权限的应用都可以通过标准化的 “API”..."
+  },
+  {
+    "slug": "客户端/安卓开发/blob/binder",
+    "name": "binder",
+    "dirs": [
+      "客户端",
+      "客户端/安卓开发",
+      "客户端/安卓开发/blob"
+    ],
+    "title": "binder",
+    "date": "2025-11-22",
+    "tags": [],
+    "summary": "最近学习到了安卓开发中的Service，发现其Activity和Service通信，使用到了binder，很是疑惑，明明Activity要使用Serice重的功能，为什么不搞个接口IService，对于某个Service实现其接口。然后Activity通过多态去调用不同Service的功能，但是为什..."
   }
 ]

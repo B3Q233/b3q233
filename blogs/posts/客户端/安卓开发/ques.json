@@ -1,0 +1,14 @@
+{
+  "slug": "客户端/安卓开发/ques",
+  "name": "ques",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发"
+  ],
+  "body": "~~~\r\n使用glide加载图片给自定义view，但是view中有动画，为了防止内存泄漏需要在onDetachedFromWindow方法中cancel动画，但是我顺便清理掉了view所需要的图片，由于图片之后在onBindViewHolder方法中加载，那么当我把一个item移除可视区域，会触发onDetachedFromWindow方法，清理动画和图片，而又不会调用onBindViewHolder（因为只是位置发生了改变），就会导致当我滑到之前的item，却没有图片显示出来\r\n~~~\r\n\r\n",
+  "bodyHtml": "<pre><code>使用glide加载图片给自定义view，但是view中有动画，为了防止内存泄漏需要在onDetachedFromWindow方法中cancel动画，但是我顺便清理掉了view所需要的图片，由于图片之后在onBindViewHolder方法中加载，那么当我把一个item移除可视区域，会触发onDetachedFromWindow方法，清理动画和图片，而又不会调用onBindViewHolder（因为只是位置发生了改变），就会导致当我滑到之前的item，却没有图片显示出来</code></pre>",
+  "title": "ques",
+  "date": "2026-02-21",
+  "tags": [],
+  "summary": "使用glide加载图片给自定义view，但是view中有动画，为了防止内存泄漏需要在onDetachedFromWindow方法中cancel动画，但是我顺便清理掉了view所需要的图片，由于图片之后在onBindViewHolder方法中加载，那么当我把一个item移除可视区域，会触发onDeta..."
+}

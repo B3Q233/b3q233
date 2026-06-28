@@ -1,0 +1,15 @@
+{
+  "slug": "客户端/安卓开发/blob/binder",
+  "name": "binder",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/blob"
+  ],
+  "body": "最近学习到了安卓开发中的Service，发现其Activity和Service通信，使用到了binder，很是疑惑，明明Activity要使用Serice重的功能，为什么不搞个接口IService，对于某个Service实现其接口。然后Activity通过多态去调用不同Service的功能，但是为什么却要搞个Binder，通过中间层的binder调用Service中的方法",
+  "bodyHtml": "<p>最近学习到了安卓开发中的Service，发现其Activity和Service通信，使用到了binder，很是疑惑，明明Activity要使用Serice重的功能，为什么不搞个接口IService，对于某个Service实现其接口。然后Activity通过多态去调用不同Service的功能，但是为什么却要搞个Binder，通过中间层的binder调用Service中的方法</p>",
+  "title": "binder",
+  "date": "2025-11-22",
+  "tags": [],
+  "summary": "最近学习到了安卓开发中的Service，发现其Activity和Service通信，使用到了binder，很是疑惑，明明Activity要使用Serice重的功能，为什么不搞个接口IService，对于某个Service实现其接口。然后Activity通过多态去调用不同Service的功能，但是为什..."
+}

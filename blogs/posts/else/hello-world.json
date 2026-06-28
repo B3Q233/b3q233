@@ -1,0 +1,16 @@
+{
+  "slug": "else/hello-world",
+  "name": "hello-world",
+  "dirs": [
+    "else"
+  ],
+  "body": "# 我的第一篇博客\n\n欢迎来到我的个人博客！这是第一篇示例文章。\n\n## 关于这个博客\n\n这个博客采用纯静态架构：\n\n- **Markdown 编写**：所有文章使用 Markdown 格式\n- **自动索引**：构建脚本自动扫描目录生成文章列表\n- **零依赖部署**：可部署到 GitHub Pages、Vercel 等任意静态托管\n\n## 代码示例\n\n```javascript\n// 一段简单的代码\nfunction greet(name) {\n    return `你好，${name}！欢迎来到我的博客。`;\n}\n\nconsole.log(greet('访客'));\n```\n\n## 小结\n\n这只是个开始，更多内容敬请期待！\n",
+  "bodyHtml": "<h1>我的第一篇博客</h1>\n<p>欢迎来到我的个人博客！这是第一篇示例文章。</p>\n<h2>关于这个博客</h2>\n<p>这个博客采用纯静态架构：</p>\n<ul><li><strong>Markdown 编写</strong>：所有文章使用 Markdown 格式</li>\n<li><strong>自动索引</strong>：构建脚本自动扫描目录生成文章列表</li>\n<li><strong>零依赖部署</strong>：可部署到 GitHub Pages、Vercel 等任意静态托管</li>\n</ul>\n<h2>代码示例</h2>\n<pre><code class=\"language-javascript\">// 一段简单的代码\nfunction greet(name) {\n    return `你好，${name}！欢迎来到我的博客。`;\n}\n\nconsole.log(greet('访客'));</code></pre>\n<h2>小结</h2>\n<p>这只是个开始，更多内容敬请期待！</p>",
+  "tags": [
+    "技术",
+    "博客"
+  ],
+  "title": "hello-world",
+  "date": "2026-06-28",
+  "summary": "欢迎来到我的个人博客！这是第一篇示例文章。  关于这个博客 这个博客采用纯静态架构： - Markdown 编写：所有文章使用 Markdown 格式 - 自动索引：构建脚本自动扫描目录生成文章列表 - 零依赖部署：可部署到 GitHub Pages、Vercel 等任意静态托管  代码示例 ..."
+}

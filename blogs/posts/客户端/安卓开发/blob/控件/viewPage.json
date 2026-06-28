@@ -1,0 +1,16 @@
+{
+  "slug": "客户端/安卓开发/blob/控件/viewPage",
+  "name": "viewPage",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/blob",
+    "客户端/安卓开发/blob/控件"
+  ],
+  "body": "在安卓开发中，`ViewPager2` 是用来实现页面左右滑动（或上下滑动）的核心组件。它是对旧版 `ViewPager` 的彻底重构，基于 `RecyclerView` 实现，因此继承了 `RecyclerView` 的所有优点（如高效的回收机制）。\r\n\r\n",
+  "bodyHtml": "在安卓开发中，<code>ViewPager2</code> 是用来实现页面左右滑动（或上下滑动）的核心组件。它是对旧版 <code>ViewPager</code> 的彻底重构，基于 <code>RecyclerView</code> 实现，因此继承了 <code>RecyclerView</code> 的所有优点（如高效的回收机制）。",
+  "title": "viewPage",
+  "date": "2026-03-03",
+  "tags": [],
+  "summary": "在安卓开发中，ViewPager2 是用来实现页面左右滑动（或上下滑动）的核心组件。它是对旧版 ViewPager 的彻底重构，基于 RecyclerView 实现，因此继承了 RecyclerView 的所有优点（如高效的回收机制）。"
+}

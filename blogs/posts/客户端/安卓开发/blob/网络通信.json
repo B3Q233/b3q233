@@ -1,0 +1,15 @@
+{
+  "slug": "客户端/安卓开发/blob/网络通信",
+  "name": "网络通信",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/blob"
+  ],
+  "body": "通过网络请求获取服务器上数据\r\n\r\nOkHttp\r\n\r\nOkHttp 是由 Square 公司开发的一款高效的 HTTP/HTTPS 客户端，支持 Android 和 Java 平台，它解决了传统 HttpURLConnection 用法繁琐、性能差的问题，也是 Retrofit（另一个流行的网络框架）的底层依赖。\r\n\r\n#### 添加依赖\r\n\r\n~~~kotlin\r\ndependencies {\r\n    // OkHttp 核心依赖\r\n    implementation 'com.squareup.okhttp3:okhttp:4.12.0'\r\n    // 可选：OkHttp 日志拦截器（方便调试）\r\n    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'\r\n}\r\n~~~\r\n\r\n添加网络权限\r\n\r\n~~~xml\r\n<uses-permission android:name=\"android.permission.INTERNET\" />\r\n~~~\r\n\r\n支持GET(同步\\异步)和Post请求",
+  "bodyHtml": "<p>通过网络请求获取服务器上数据</p>\n<p>OkHttp</p>\n<p>OkHttp 是由 Square 公司开发的一款高效的 HTTP/HTTPS 客户端，支持 Android 和 Java 平台，它解决了传统 HttpURLConnection 用法繁琐、性能差的问题，也是 Retrofit（另一个流行的网络框架）的底层依赖。</p>\n<h4>添加依赖</h4>\n<pre><code class=\"language-kotlin\">dependencies {\n    // OkHttp 核心依赖\n    implementation 'com.squareup.okhttp3:okhttp:4.12.0'\n    // 可选：OkHttp 日志拦截器（方便调试）\n    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'\n}</code></pre>\n<p>添加网络权限</p>\n<pre><code class=\"language-xml\">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</code></pre>\n<p>支持GET(同步\\异步)和Post请求</p>",
+  "title": "网络通信",
+  "date": "2025-12-29",
+  "tags": [],
+  "summary": "通过网络请求获取服务器上数据\r \r OkHttp\r \r OkHttp 是由 Square 公司开发的一款高效的 HTTP/HTTPS 客户端，支持 Android 和 Java 平台，它解决了传统 HttpURLConnection 用法繁琐、性能差的问题，也是..."
+}

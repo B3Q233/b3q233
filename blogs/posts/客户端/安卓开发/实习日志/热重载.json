@@ -1,0 +1,15 @@
+{
+  "slug": "客户端/安卓开发/实习日志/热重载",
+  "name": "热重载",
+  "dirs": [
+    "客户端",
+    "客户端/安卓开发",
+    "客户端/安卓开发/实习日志"
+  ],
+  "body": "# 热重载\r\n\r\n**在真实运行的应用上**即时刷新 UI 变化，简单来说，在修改代码之后不需要重新编译，重新运行，就可以在真机上实时显示的技术\r\n\r\n\r\n\r\n目前KMP支持的热重载的平台\r\n\r\nAndroid\r\n\r\nDesktop \r\n\r\n**iOS**  暂时没有支持\r\n\r\n\r\n\r\n由于只使用到了ios 和 Android，介绍Android的配置过程\r\n\r\nKMP 里 Android 端的热重载直接用 Android Studio 内置的 **Live Edit** 就行，不需要额外配置。\r\n\r\n **确认 Android Studio 版本** 需要 Hedgehog（2023.1.1）或更新版本\r\n\r\n **开启 Live Edit** `Settings → Editor → Live Edit` → 勾选 **Enable Live Edit**\r\n\r\n其中选项二需要手动点击一下\r\n\r\n<img src=\"C:\\Users\\b3q\\AppData\\Roaming\\Typora\\typora-user-images\\image-20260421142233844.png\" alt=\"image-20260421142233844\" style=\"zoom:50%;\" />\r\n\r\n\r\n\r\n\r\n\r\n然后运行KMP项目，程序入口位于 ComposeMain 模块下的APP.kt\r\n\r\n<img src=\"C:\\Users\\b3q\\AppData\\Roaming\\Typora\\typora-user-images\\image-20260421142348117.png\" alt=\"image-20260421142348117\" style=\"zoom:50%;\" />\r\n\r\n\r\n\r\n使用 run 模式启动\r\n\r\n![image-20260421142405365](pic/客户端/安卓开发/实习日志/热重载/image-20260421142405365.png)\r\n\r\n当修改UI时，就能自动在真机上刷新了",
+  "bodyHtml": "<h1>热重载</h1>\n<p><strong>在真实运行的应用上</strong>即时刷新 UI 变化，简单来说，在修改代码之后不需要重新编译，重新运行，就可以在真机上实时显示的技术</p>\n<p>目前KMP支持的热重载的平台</p>\n<p>Android</p>\n<p>Desktop </p>\n<p><strong>iOS</strong>  暂时没有支持</p>\n<p>由于只使用到了ios 和 Android，介绍Android的配置过程</p>\n<p>KMP 里 Android 端的热重载直接用 Android Studio 内置的 <strong>Live Edit</strong> 就行，不需要额外配置。</p>\n<p> <strong>确认 Android Studio 版本</strong> 需要 Hedgehog（2023.1.1）或更新版本</p>\n <strong>开启 Live Edit</strong> <code>Settings → Editor → Live Edit</code> → 勾选 <strong>Enable Live Edit</strong>\n<p>其中选项二需要手动点击一下</p>\n<img src=\"C:\\Users\\b3q\\AppData\\Roaming\\Typora\\typora-user-images\\image-20260421142233844.png\" alt=\"image-20260421142233844\" style=\"zoom:50%;\" />\n<p>然后运行KMP项目，程序入口位于 ComposeMain 模块下的APP.kt</p>\n<img src=\"C:\\Users\\b3q\\AppData\\Roaming\\Typora\\typora-user-images\\image-20260421142348117.png\" alt=\"image-20260421142348117\" style=\"zoom:50%;\" />\n<p>使用 run 模式启动</p>\n<img src=\"pic/客户端/安卓开发/实习日志/热重载/image-20260421142405365.png\" alt=\"image-20260421142405365\">\n<p>当修改UI时，就能自动在真机上刷新了</p>",
+  "title": "热重载",
+  "date": "2026-04-21",
+  "tags": [],
+  "summary": "热重载\r \r 在真实运行的应用上即时刷新 UI 变化，简单来说，在修改代码之后不需要重新编译，重新运行，就可以在真机上实时显示的技术\r \r \r \r 目前KMP支持的热重载的平台\r \r Android\r \r Desktop \r \r iOS  暂时没有支持\r \r \r \r 由于只使用到了ios 和..."
+}
