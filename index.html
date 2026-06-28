@@ -87,6 +87,9 @@
             document.title = r.title + ' | b3q';
             el.innerHTML = r.bodyHtml;
 
+            // === 左侧快速索引 (TOC) ===
+            buildTOC(el);
+
         } catch (err) {
             console.error(err);
             el.innerHTML = '<p style="text-align:center;color:var(--color-text-muted);padding:3rem 0;">简历加载失败，请先运行 <code>node js/build.js</code></p>';
@@ -97,6 +100,110 @@
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
+    }
+
+    /** 构建左侧目录（与 post.html 同款手风琴 TOC） */
+    function buildTOC(contentEl) {
+        const headings = contentEl.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        if (headings.length < 2) return;
+
+        const items = [];
+        const usedIds = new Set();
+        headings.forEach(h => {
+            let id = h.textContent.trim()
+                .toLowerCase()
+                .replace(/[^\w一-鿿]+/g, '-')
+                .replace(/^-|-$/g, '')
+                .replace(/-{2,}/g, '-');
+            if (!id) id = 'heading';
+            if (usedIds.has(id)) {
+                let n = 2;
+                while (usedIds.has(id + '-' + n)) n++;
+                id = id + '-' + n;
+            }
+            usedIds.add(id);
+            h.id = id;
+            items.push({ level: parseInt(h.tagName[1]), text: h.textContent.trim(), id, children: [] });
+        });
+
+        // 构建嵌套树
+        const tree = [];
+        const stack = [];
+        items.forEach(item => {
+            while (stack.length > 0 && stack[stack.length - 1].level >= item.level) stack.pop();
+            if (stack.length === 0) tree.push(item);
+            else stack[stack.length - 1].children.push(item);
+            stack.push(item);
+        });
+
+        function renderTree(nodes) {
+            if (!nodes.length) return '';
+            let h = '<ul class="toc-list">';
+            nodes.forEach(node => {
+                const hasChildren = node.children.length > 0;
+                h += '<li class="toc-item" data-level="' + node.level + '">';
+                h += '<div class="toc-node">';
+                if (hasChildren) h += '<span class="toc-arrow">▼</span>';
+                h += '<a href="#' + node.id + '" title="' + escHtml(node.text) + '">' + escHtml(node.text) + '</a>';
+                h += '</div>';
+                if (hasChildren) h += renderTree(node.children);
+                h += '</li>';
+            });
+            h += '</ul>';
+            return h;
+        }
+
+        const panel = document.createElement('aside');
+        panel.className = 'toc-panel';
+        panel.innerHTML = '<div class="toc-title">📑 目录</div>' + renderTree(tree);
+
+        const toggle = document.createElement('button');
+        toggle.className = 'toc-toggle';
+        toggle.innerHTML = '▶';
+        toggle.title = '显示目录';
+        toggle.setAttribute('aria-label', '切换目录');
+
+        let isOpen = false;
+        toggle.addEventListener('click', () => {
+            isOpen = !isOpen;
+            panel.classList.toggle('toc-open', isOpen);
+            toggle.classList.toggle('toc-toggle-open', isOpen);
+            toggle.innerHTML = isOpen ? '◀' : '▶';
+            toggle.title = isOpen ? '隐藏目录' : '显示目录';
+        });
+
+        panel.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                setTimeout(() => {
+                    isOpen = false;
+                    panel.classList.remove('toc-open');
+                    toggle.classList.remove('toc-toggle-open');
+                    toggle.innerHTML = '▶';
+                    toggle.title = '显示目录';
+                }, 200);
+            }
+            // 手风琴折叠
+            const arrow = e.target.closest('.toc-arrow');
+            if (arrow) {
+                e.preventDefault();
+                e.stopPropagation();
+                const li = arrow.closest('.toc-item');
+                if (li) li.classList.toggle('toc-collapsed');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (isOpen && !panel.contains(e.target) && e.target !== toggle) {
+                isOpen = false;
+                panel.classList.remove('toc-open');
+                toggle.classList.remove('toc-toggle-open');
+                toggle.innerHTML = '▶';
+                toggle.title = '显示目录';
+            }
+        });
+
+        document.body.appendChild(panel);
+        document.body.appendChild(toggle);
     }
     </script>
 
